@@ -1,38 +1,21 @@
-/*import express from 'express';
-import { registerUser, loginUser } from '../controllers/userController.js';
-const router = express.Router();
-router.post('/register', registerUser);
-router.post('/login', loginUser);
-export default router;*/
-
-/*import express from 'express';
-import { registerUser, loginUser, viewProfile } from '../controllers/userController.js';
-const router = express.Router();
-
-// Rota de registro
-router.post('/register', registerUser);
-
-// Rota de login
-router.post('/login', loginUser);
-
-// Rota para exibir o perfil do usuário
-router.get('/profile', viewProfile);
-
-export default router;
-*/
-import path from'path';
+import path from 'path';
 import express from 'express';
 import { registerUser, loginUser, viewProfile } from '../controllers/userController.js';
 const router = express.Router();
 
 // Rota para exibir a página de login (GET)
-router.get('/login', (req, res) => {
-  res.sendFile(path.join(path.resolve(), 'public', 'login.html'));
+router.get('/login.html', (req, res) => {
+    res.sendFile(path.join(path.resolve(), 'public', 'login.html'));
 });
 
 // Rota para exibir a página de registro (GET)
-router.get('/register', (req, res) => {
-  res.sendFile(path.join(path.resolve(), 'public', 'register.html'));
+router.get('/register.html', (req, res) => {
+    res.sendFile(path.join(path.resolve(), 'public', 'register.html'));
+});
+
+// Rota para exibir a página de confirmação (GET)
+router.get('/confirmation.html', (req, res) => {
+    res.sendFile(path.join(path.resolve(), 'public', 'confirmation.html'));
 });
 
 // Rota de registro (POST)

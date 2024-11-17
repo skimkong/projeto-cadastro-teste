@@ -3,37 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.scss">
     <title>Login</title>
 </head>
 <body>
-    <header>
-        <h1>Login</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/register">Registrar</a></li>
-        </ul>
-    </nav>
-
-    <main class="container">
-        <div class="card">
-            <form action="/login" method="POST">
-                <label for="username">Usuário</label>
+    <div class="container">
+        <h1>Faça o seu login</h1>
+        <form id="loginForm" action="/api/users/login" method="POST">
+            <div class="input-group">
+                <label for="username">Seu e-mail*</label>
                 <input type="text" id="username" name="username" required>
-
-                <label for="password">Senha</label>
+            </div>
+            <div class="input-group">
+                <label for="password">Sua senha*</label>
                 <input type="password" id="password" name="password" required>
-
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-    </main>
-
-    <footer>
-        <p>Todos os direitos reservados &copy; 2024</p>
-    </footer>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Lembrar-me</label>
+            </div>
+            <button type="submit">ENTRAR</button>
+            <p><a href="#">Esqueceu sua senha? Clique aqui!</a></p>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "username": "teste",
+      "password": "$2a$10$DAnTm94jevvtFTSy3S0ya.rAeLwXdvyImmXHgvl0J77OSc392pYpC",
+      "email": "test@test.com"
+    },
+    {
+      "username": "test2",
+      "password": "$2a$10$XtkJVH4.ixl.ajKkFLnO3uaFRdExsDMjqKwDyTMZFyehtPW.pXlJ6",
+      "email": "a@icloud.com"
+    }
+  ]
+}
